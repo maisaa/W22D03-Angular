@@ -11,6 +11,8 @@ export class TodosComponent implements OnInit {
   homeName: string = "TodoList App";
   todos: string[] = ["eat","code","sleep"];
   todo: string ="";
+  newtodo: string="";
+
   constructor() { }
 
   ngOnInit(): void {
@@ -28,8 +30,7 @@ export class TodosComponent implements OnInit {
     this.todos.push(todo);
   }
 
-  updateTodo(todo: string):void{
-    let i = this.todos.indexOf(todo);
+  updateTodo(i:number, todo: string):void{
     this.todos[i]=todo;
   }
   

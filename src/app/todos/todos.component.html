@@ -5,16 +5,16 @@
   <ul>
     <li *ngFor="let todo of todos; let i = index">
       <span class="badge">Task {{i}} : {{ todo }}</span>
-      <div>
+      
         <button (click)="deleteTodo(todo)">Delete</button>
-        <button (click)="updateTodo(todo)">Update</button>
-      </div>
+        <button (click)="updateTodo(i,newtodo)">Update</button>
+        <input  type="text" [(ngModel)]="newtodo" />
     </li>
   </ul>
 
-  <label for="todo">todo: </label>
-  <input id="todo" type="text" [(ngModel)]="todo" placeholder="todo" />
+  <label for="todo">Add new task: </label>
+  <input  type="text" [(ngModel)]="todo" placeholder="todo"/>
   <button (click)="addTodo(todo)">Add</button>
-  <h3>new task: {{ todo }}</h3>
+
 </div>
 
