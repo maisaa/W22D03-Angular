@@ -11,8 +11,8 @@ export class HomeComponent implements OnInit {
   @Input() newTitle: String="";
 
   homeName: string = "home name";
-  todos: string[] = ["todo 1","todo 2","todo 3"];
-  email: string ="nnnnn";
+  todos: string[] = ["eat","code","sleep"];
+  email: string ="";
 
   constructor() { }
 
