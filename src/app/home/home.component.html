@@ -1,0 +1,15 @@
+<p>home works!</p>
+
+<h1>Home new Title is {{newTitle}}</h1>
+<h2>name is {{name}}</h2>
+
+
+<ul *ngFor="let todo of todos; let i = index">
+    <li>{{i}}: {{todo}}</li>
+    <button (click)="showTodo(todo)">Click</button>
+</ul>
+
+
+<input type="text"   [(ngModel)]="email"  placeholder="email"/> 
+
+<h3>the email is: {{email}}</h3>
