@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { discardPeriodicTasks } from '@angular/core/testing';
 
 @Component({
   selector: 'app-home',
@@ -10,17 +11,15 @@ export class HomeComponent implements OnInit {
   @Input() name: String="";
   @Input() newTitle: String="";
 
-  homeName: string = "home name";
-  todos: string[] = ["eat","code","sleep"];
-  email: string ="";
+  
+  
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  showTodo(todo: string): void{
-    console.log(`Todo: ${todo}`)
-  }
+  
+
 
 }

@@ -1,1 +1,20 @@
-<p>todos works!</p>
+<div class="todos">
+  <p>Angular - Todos Component works!</p>
+
+  <h2>My Todo List</h2>
+  <ul>
+    <li *ngFor="let todo of todos; let i = index">
+      <span class="badge">Task {{i}} : {{ todo }}</span>
+      <div>
+        <button (click)="deleteTodo(todo)">Delete</button>
+        <button (click)="updateTodo(todo)">Update</button>
+      </div>
+    </li>
+  </ul>
+
+  <label for="todo">todo: </label>
+  <input id="todo" type="text" [(ngModel)]="todo" placeholder="todo" />
+  <button (click)="addTodo(todo)">Add</button>
+  <h3>new task: {{ todo }}</h3>
+</div>
+

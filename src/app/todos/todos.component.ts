@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input } from '@angular/core';
 
 @Component({
   selector: 'app-todos',
@@ -7,15 +7,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
-  todos: string[]=['eat','code','sleep']
 
+  homeName: string = "TodoList App";
+  todos: string[] = ["eat","code","sleep"];
+  todo: string ="";
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  showTodo(todos:string):void{
-    
+  onSelect(i:number, todo: string): void {
+    this.todos[i] = todo;
+  }
+
+  showTodo(i:number): void{
+    console.log(`Todo: ${this.todos[i]}`)
+  }
+
+  addTodo(todo: string): void{
+    this.todos.push(todo);
+  }
+
+  updateTodo(todo: string):void{
+    let i = this.todos.indexOf(todo);
+    this.todos[i]=todo;
+  }
+  
+  deleteTodo(todo: string): void{
+    let i = this.todos.indexOf(todo);
+    this.todos.splice(i,1);
   }
 
 }

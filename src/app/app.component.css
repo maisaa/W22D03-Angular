@@ -1,0 +1,13 @@
+
+body{
+    background-color: crimson;
+}
+.App {
+  margin: 2.5rem;
+  padding: 1.5rem;
+  /* border: 2px solid blue; */
+}
+.title{
+    text-align: center;
+    justify-content: center;
+}

@@ -1,17 +1,15 @@
 <div class="home">
-  <p>Home Component works!</p>
+  <h2>{{ newTitle }}</h2>
+  <h4>By {{ name }}</h4>
+  <p>Angular - Home Component works!</p>
 
-  <h1>Home newTitle is {{ newTitle }}</h1>
-  <h2>name is {{ name }}</h2>
-
-  <ol *ngFor="let todo of todos; let i = index">
-    <li>
+  <!-- <tr *ngFor="let todo of todos; let i = index">
+    <td>
       {{ i }}: {{ todo }}
-      <button (click)="showTodo(todo)">Click</button>
-    </li>
-  </ol>
+      <button (click)="addTodo(todo)">Click</button>
+      <button (click)="updateTodo(todo)">Update</button>
+      <button (click)="deleteTodo(todo)">Delete</button>
+    </td>
+  </tr>  -->
 
-  <input type="text" [(ngModel)]="email" placeholder="email" />
-
-  <h3>the email is: {{ email }}</h3>
-</div>
+  

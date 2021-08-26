@@ -8,8 +8,8 @@ import { Component , OnInit } from '@angular/core';
 export class AppComponent  {
   title = 'CRUD';
 
-  name: string = "Maisaa Alkhedr";
-  NewTitle : string = "App new title 1";
+  NewTitle : string = "CRUD TodoList App";
+  name: string = "Maisaa Alkhder";
   email: string = "maisaa.alkhedr@gmail.com"
 
 }
